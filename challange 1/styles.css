@@ -4,7 +4,7 @@
 :root {
     --border-radius: 10px;
     --bacground-color: rgb(195, 212, 246);
-    --text-color: rgb(133, 133, 133);
+    --text-color: rgb(101, 101, 102);
     --heading-background-color: rgb(108, 123, 224);
     --row-separator: rgb(242, 242, 242);
 }
@@ -14,46 +14,36 @@ body {
     background-color: var(--bacground-color);
     font-family: 'Poppins', sans-serif;
     text-align: left;
-    color: rgb(101, 101, 102);
+    color: var(--text-color);
     line-height: 1.2;
 }
 
-table,
-td,
-tr,
-th {
-    border-collapse: collapse !important;
-    border: none !important;
-    border-style: hidden !important;
-}
-
 table {
-    border: 0;
     border-collapse: collapse;
-    background-color: white;
+    background-color: white;    
     margin: auto;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     border-radius: var(--border-radius);
-    border-style: hidden;
+    display: block;
+    
 }
 
 td {
     white-space: nowrap;
     font-size: 15px;
 }
-th {
-    font-size: 18px;
-    font-weight: normal;
-    background-color: var(--heading-background-color);
-}
 
 /*      TABLE-HEADING ROW       */
 table tr:first-child{
     background-color: var(--heading-background-color);
     color: white;
+}
+th {
+    font-size: 18px;
+    font-weight: normal;
 }
 /*---------------------------------------*/
 
@@ -69,6 +59,9 @@ table tr:first-child th:last-child {
 /*      ROW SEPARATOR       */
 tr {
     border-bottom: 1px solid var(--row-separator);
+}
+table tr:last-child {
+    border-style: none;     /*  Last row has no line at the bottom  */
 }
 /*---------------------------------*/
 
@@ -91,3 +84,19 @@ table tr:first-child th:nth-child(4) {   /*  4   */
     padding: 20px 100px 20px 40px;
 }
 /*--------------------------------*/
+
+/*  REMOVING THE WHITE LINES BETWEEN th ELEMENTS    */
+
+th {
+    background-color: var(--heading-background-color);
+    border-right: 2px solid var(--heading-background-color);
+    padding-bottom: 17px !important;
+}
+th:last-child   {
+    border: 0;
+}
+table tr:first-child {
+    border-bottom: 3px solid var(--heading-background-color);
+}
+
+/*-------------------------------------------------*/
