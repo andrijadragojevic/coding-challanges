@@ -1,35 +1,93 @@
-body {
-    background-color: rgb(195, 212, 246);
-    font-family: sans-serif;
+
+/*      VARIABLES       */
+
+:root {
+    --border-radius: 10px;
+    --bacground-color: rgb(195, 212, 246);
+    --text-color: rgb(133, 133, 133);
+    --heading-background-color: rgb(108, 123, 224);
+    --row-separator: rgb(242, 242, 242);
 }
+/*-------------------------*/
+
+body {
+    background-color: var(--bacground-color);
+    font-family: 'Poppins', sans-serif;
+    text-align: left;
+    color: rgb(101, 101, 102);
+    line-height: 1.2;
+}
+
+table,
+td,
+tr,
+th {
+    border-collapse: collapse !important;
+    border: none !important;
+    border-style: hidden !important;
+}
+
 table {
+    border: 0;
+    border-collapse: collapse;
     background-color: white;
-    line-height: 1.5;
     margin: auto;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    border-radius: 20px;
+    border-radius: var(--border-radius);
+    border-style: hidden;
 }
 
-tr {
-    border-bottom: 1px solid black;
+td {
+    white-space: nowrap;
+    font-size: 15px;
 }
-
-
-.table-heading {
-    border-top: 20px;
-    border-color: rgb(108, 123, 224);
-    background-color: rgb(108, 123, 224);
-    color: white;
-    
-    
-}
-
-td,
 th {
-    padding: 10px 30px;
-    
-
+    font-size: 18px;
+    font-weight: normal;
+    background-color: var(--heading-background-color);
 }
+
+/*      TABLE-HEADING ROW       */
+table tr:first-child{
+    background-color: var(--heading-background-color);
+    color: white;
+}
+/*---------------------------------------*/
+
+/*  TOP TWO ROUNDER BORDERS*/
+table tr:first-child th:first-child {
+    border-top-left-radius: var(--border-radius);
+}
+table tr:first-child th:last-child {
+    border-top-right-radius: var(--border-radius);
+}
+/*--------------------------------*/
+
+/*      ROW SEPARATOR       */
+tr {
+    border-bottom: 1px solid var(--row-separator);
+}
+/*---------------------------------*/
+
+/*      COLUMN PADDING */
+table tr td:first-child,
+table tr:first-child th:first-child {   /*  1   */
+    padding: 20px 140px 20px 40px;
+}
+table tr td:nth-child(2),
+table tr:first-child th:nth-child(2) {   /*  2   */
+    padding: 20px 100px 20px 40px;
+    
+}
+table tr td:nth-child(3),
+table tr:first-child th:nth-child(3) {   /*  3   */
+    padding: 20px 100px 20px 30px;
+}
+table tr td:nth-child(4),
+table tr:first-child th:nth-child(4) {   /*  4   */
+    padding: 20px 100px 20px 40px;
+}
+/*--------------------------------*/
