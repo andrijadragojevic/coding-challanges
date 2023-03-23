@@ -47,7 +47,7 @@ th {
 }
 /*---------------------------------------*/
 
-/*  TOP TWO ROUNDER BORDERS*/
+/*  TOP TWO ROUNDED BORDERS*/
 table tr:first-child th:first-child {
     border-top-left-radius: var(--border-radius);
 }
