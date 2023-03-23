@@ -1,0 +1,75 @@
+/*  VARIABLES   */
+:root {
+    --background-color : rgb(195, 212, 246);
+    --table-header-background-color : rgb(108, 123, 224);
+    --text-font : 'Poppins', sans-serif;
+    --text-color: rgb(101, 101, 102);
+    --table-header-font-size : 18px;
+    --table-body-font-size : 15px;
+    --table-border-radius : 10px;
+}
+/*--------------------------------*/
+
+body {
+    background-color: var(--background-color);
+    font-family: var(--text-font);
+    
+}
+
+table {
+    color: var(--text-color) !important;
+    background-color: white;
+    font-size: var(--table-body-font-size);
+    
+}
+
+/*  TABLE HEADER ROW  */
+
+table tr:first-child {
+    background-color: var(--table-header-background-color);
+    border: 0;
+    border-collapse: collapse;
+    font-size: var(--table-header-font-size);
+    font-weight: normal;
+}
+/*---------------------------------*/
+
+th {
+    font-weight: normal;
+}
+
+/*  ROUNDED EDGES ON TOP    */
+
+tr th:first-child {
+    border-top-left-radius: 1rem;
+}
+tr th:last-child {
+    border-top-right-radius: 1rem;
+}
+/*-----------------------------*/
+
+/*  PADDINGS    */
+
+td,
+th {
+    padding: 1rem 4rem 1rem 2rem !important;
+}
+
+@media screen and (max-width:1000px) {
+    th,
+    td {
+        padding: 1rem !important;
+    }
+    div {
+        width:90% !important;
+    }
+}
+/*-------------------*/
+
+/*  REMOVING THE ROW SEPARATOR FROM THE BOTTOM ROW  */
+
+table tr:last-child {
+    border-bottom-style: hidden !important;
+}
+/*-----------------------------*/
+
