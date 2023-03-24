@@ -1,20 +1,31 @@
-body div:first-child div:first-child{
-    font-size: small;
-    
+.mapform {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 .message-form {
     background-color: rgb(232, 237, 240);
+    font-size: 12px;
 }
 
+/*  CONTACT ICONS   */
 
 i {
     border-radius: 100%;
-    background-color: aqua;
     padding: 15px;
     color: white;
 }
+/*-------------------------*/
 
+/*  REMOVING LINK UNDERLINE */
 a {
     text-decoration: none !important;
+}
+/*----------------------------*/
+
+body:first-child{
+    margin-top: 15%;
+    background-color: ;
 }
